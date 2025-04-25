@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import Navbar from "../assets/Navbar";
+import Banner from "../components/dashboardComponents/Banner";
 
-class Dashboard extends Component {
-  render() {
+const Dashboard = () => {
     return (
-      <div className="p-6">
-        <h1>Hello World</h1>
-        <p className="text-green-600 text-lg font-semibold mt-2">All is ok</p>
+      <div className="h-screen">
+        <Navbar/>
+        <Banner />
       </div>
     );
-  }
 }
+
 
 export default Dashboard;
