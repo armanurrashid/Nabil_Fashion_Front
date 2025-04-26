@@ -1,5 +1,6 @@
-import sharee1 from "../../../src/images/sharee1.jpg";
+import sharee1 from "../../../src/images/sharee1.png";
 import sharee2 from "../../../src/images/sharee2.jpg";
+import sharee3 from "../../../src/images/sharee3.jpg";
 import 'flowbite';
 
 const Banner = () => {
@@ -13,10 +14,14 @@ const Banner = () => {
                     <div className="hidden duration-700 ease-in-out" data-carousel-item>
                         <img src={sharee2} className=" block w-full" alt="..." />
                     </div>
+                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src={sharee3} className=" block w-full" alt="..." />
+                    </div>
                 </div>
                 <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
                     <button type="button" className="w-3 h-3 rounded-full" data-carousel-slide-to="0"></button>
                     <button type="button" className="w-3 h-3 rounded-full" data-carousel-slide-to="1"></button>
+                    <button type="button" className="w-3 h-3 rounded-full" data-carousel-slide-to="2"></button>
                 </div>
 
                 <button
