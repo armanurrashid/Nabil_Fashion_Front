@@ -1,16 +1,16 @@
 import LeftArrow from "svgs/leftArrow";
-import sharee1 from "../../../src/images/sharee1.png";
-import sharee2 from "../../../src/images/sharee2.jpg";
-import sharee3 from "../../../src/images/sharee3.jpg";
+import sharee1 from "images/sharee1.png";
+import sharee2 from "images/sharee2.jpg";
+import sharee3 from "images/sharee3.jpg";
 import 'flowbite';
 import RightArrow from "svgs/rightArrow";
+import UpcomingCampaigns from "./countDownCard";
 
 const Banner = () => {
     return (
-        <div className=" mx-auto" >
-            <div id="default-carousel" className="relative w-full" data-carousel="slide" >
-                <div className="relative h-[675px] overflow-hidden">
-                 
+        <div className="mx-auto flex p-5" >
+            <div id="default-carousel" className="relative w-full mx-5" data-carousel="slide" >
+                <div className="relative h-[480px] overflow-hidden border rounded-3xl">
                     <div className="hidden duration-700 ease-in-out" data-carousel-item>
                         <img src={sharee1} className=" block w-full" alt="..." />
                     </div>
@@ -50,6 +50,9 @@ const Banner = () => {
                     </span>
                 </button>
 
+            </div>
+            <div>
+                <UpcomingCampaigns />
             </div>
         </div>
     );

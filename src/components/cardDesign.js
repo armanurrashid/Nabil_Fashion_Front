@@ -7,7 +7,7 @@ const CardDesign = ({ likeData, title, slice}) => {
             <div className='flex justify-between mx-4 my-8'>
                 <p className="sm:text-[35px] text-[25px] font-semibold ">{title}</p>
                 {title !== "Sub Category" && (
-                    <a href="/" className="text-[#0088FF] text-sm font-bold flex items-center">
+                    <a href="/subcategory" className="text-[#0088FF] text-sm font-bold flex items-center">
                         View More →
                     </a>
                 )}
