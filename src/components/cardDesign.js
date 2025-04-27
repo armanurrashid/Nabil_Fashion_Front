@@ -1,20 +1,22 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CardDesign = ({ likeData, title }) => {
+const CardDesign = ({ likeData, title, slice}) => {
+
     return (
         <div className='container mx-auto my-8'>
             <div className='flex justify-between mx-4 my-8'>
                 <p className="sm:text-[35px] text-[25px] font-semibold ">{title}</p>
-                <a href="/" className="text-[#0088FF] text-sm font-bold flex items-center">
-                    View More →
-                </a>
+                {title !== "Sub Category" && (
+                    <a href="/" className="text-[#0088FF] text-sm font-bold flex items-center">
+                        View More →
+                    </a>
+                )}
             </div>
 
             <div className="mt-4 ">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mx-10 xl:mx-0">
                     {likeData?.length ? (
-                        likeData?.slice(0, 10).map((item, index) => (
+                        likeData?.slice(0, slice ).map((item, index) => (
                             <Link
                                 key={index}
                                 href={`buy/${item?._id}`}

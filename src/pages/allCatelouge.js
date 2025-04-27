@@ -14,10 +14,10 @@ const AllCategory = () => {
                 <FilterData />
                 <SortBy />
             </div>
-            <CardDesign likeData={likeData} title="Category 1" />
-            <CardDesign likeData={likeData} title="Category 2" />
-            <CardDesign likeData={likeData} title="Category 3" />
-            <CardDesign likeData={likeData} title="Category 4" />
+            <CardDesign likeData={likeData} title="Category 1" slice={10} />
+            <CardDesign likeData={likeData} title="Category 2" slice={10}/>
+            <CardDesign likeData={likeData} title="Category 3" slice={10}/>
+            <CardDesign likeData={likeData} title="Category 4" slice={10}/>
             <Catelouge />
             <YouMayLike />
         </div>
