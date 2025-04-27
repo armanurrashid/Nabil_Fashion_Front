@@ -72,6 +72,7 @@
 // export default Catelouge;
 
 
+import { Link } from "react-router-dom";
 import sharee1 from "../../../src/images/s1.jpg";
 import sharee2 from "../../../src/images/s2.jpg";
 import sharee3 from "../../../src/images/s3.jpg";
@@ -83,35 +84,33 @@ const categories = [
   { img: sharee2, alt: "Luxury Lawn", label: "Luxury Lawn" },
   { img: sharee3, alt: "Festive Edit", label: "Festive Edit" },
   { img: sharee4, alt: "Ethnic Luxe", label: "Ethnic Luxe" },
-  { img: sharee5, alt: "AJ Prints Unstitched", label: "AJ Prints Unstitched" },
-  { img: sharee5, alt: "AJ Prints Unstitched", label: "AJ Prints Unstitched" }
+  { img: sharee5, alt: "AJ Prints Unstitched", label: "AJ Prints" },
+  { img: sharee5, alt: "AJ Prints Unstitched", label: "Unstitched" }
 ];
 
 const Catelouge = () => {
   return (
     <div className="container mx-auto my-8">
       <div className="mx-4 my-8">
-          <p className="sm:text-[40px] text-[25px] font-semibold">
-            SHOP BY CATEGORY <br />
-          </p>
-        </div>
-      {/* <div className="flex items-center gap-8"> */}
-        
-        <div className="flex flex-wrap gap-12 justify-center items-center">
-          {categories.map((item, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <img
-                src={item.img}
-                alt={item.alt}
-                className="xl:w-32 xl:h-32 md:w-24 md:h-24 w-20 h-20 rounded-full object-cover object-top"
-              />
-              <p className="mt-2 text-center text-sm font-medium">{item.label}</p>
-            </div>
-          ))}
-        </div>
+        <p className="sm:text-[40px] text-[25px] font-semibold">
+          SHOP BY CATEGORY <br />
+        </p>
       </div>
-    // </div>
+      <div className="flex flex-wrap gap-12 justify-center items-center">
+        {categories.map((item, index) => (
+          <Link to={`/category`} key={index} className="flex flex-col items-center">
+            <img
+              src={item.img}
+              alt={item.alt}
+              className="xl:w-32 xl:h-32 md:w-24 md:h-24 w-20 h-20 rounded-full object-cover object-top"
+            />
+            <p className="mt-2 text-center text-sm font-medium">{item.label}</p>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 };
+
 
 export default Catelouge;

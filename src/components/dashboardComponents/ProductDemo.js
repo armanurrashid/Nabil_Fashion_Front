@@ -1,28 +1,26 @@
-import Marquee from "react-fast-marquee";
-import { Link } from "react-router-dom";
-import { likeData } from "../../src/data/youMayLikeData";
+import { Link } from 'react-router-dom'
+import { likeData } from "../../../src/data/youMayLikeData";
 
-const YouMayLike = () => {
-    return (
-        <div className="container mx-auto my-8">
-            <div className="mx-4 my-8">
-                <p className="sm:text-[40px] text-[25px] font-bold ">YOU MAY LIKE</p>
+const ProductDemo = () => {
+  return (
+    <div className='container mx-auto my-8'>
+          <div className="mx-4 my-8">
+                <p className="sm:text-[40px] text-[25px] font-bold ">GHOMTA FASHION</p>
             </div>
-            <div className="mt-4 sm:mx-4 mx-2">
-                <Marquee speed={80} pauseOnHover={true}>
-                    <div className="flex w-full gap-8 mb-1 mr-7">
+            <div className="mt-4 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mx-10 xl:mx-0">
                         {likeData?.length ? (
                             likeData?.map((item, index) => (
                                 <Link
                                     key={index}
                                     href={`buy/${item?._id}`}
-                                    className="relative bg-white shadow-md rounded-[10px] overflow-hidden hover:shadow-xl cursor-pointer min-w-[250px]"
+                                    className="relative bg-white shadow-md rounded-[10px] overflow-hidden hover:shadow-xl cursor-pointer min-w-[250px] mx-4"
                                 >
                                     <div className="relative">
                                         <img
                                             src={item?.imgpath}
                                             alt={item?.name}
-                                            className="transition-transform duration-1000 ease-in-out transform h-[242px] w-[300px] object-cover group-hover:scale-110 object-top"
+                                            className="transition-transform duration-1000 ease-in-out transform h-[242px] w-[380px] object-cover group-hover:scale-110 object-top"
                                         />
                                     </div>
 
@@ -50,10 +48,9 @@ const YouMayLike = () => {
                             <p className="text-red-600">No Actions Available now </p>
                         )}
                     </div>
-                </Marquee>
             </div>
-        </div>
-    )
+    </div>
+  )
 }
 
-export default YouMayLike;
+export default ProductDemo

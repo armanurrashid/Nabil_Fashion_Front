@@ -5,7 +5,7 @@ const Navbar = () => {
             <nav class="bg-white shadow p-4">
                 <div class="container mx-auto flex items-center justify-between">
                     <div class="text-xl font-bold text-gray-800 mr-5 italic">
-                        Logo
+                        Ghomta Fashion
                     </div>
                     <div class="flex-grow max-w-xs ml-2">
                         <div class="relative">

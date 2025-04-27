@@ -1,6 +1,7 @@
 import Navbar from "../assets/Navbar";
 import Banner from "../components/dashboardComponents/Banner";
-import Catelouge from "../components/dashboardComponents/Catelouge";
+import Catelouge from "../components/dashboardComponents/catelouge";
+import ProductDemo from "../components/dashboardComponents/ProductDemo";
 import YouMayLike from "../components/YouMayLike";
 
 const Dashboard = () => {
@@ -9,6 +10,7 @@ const Dashboard = () => {
         <Navbar/>
         <Banner />
         <Catelouge />
+        <ProductDemo />
         <YouMayLike />
       </div>
     );
