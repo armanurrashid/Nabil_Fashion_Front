@@ -1,8 +1,8 @@
-import sharee1 from "../../src/images/s1.jpg";
-import sharee3 from "../../src/images/s3.jpg";
-import sharee2 from "../../src/images/s2.jpg";
-import sharee4 from "../../src/images/s4.jpg";
-import sharee5 from "../../src/images/s5.jpg";
+import sharee1 from "images/s1.jpg";
+import sharee3 from "images/s3.jpg";
+import sharee2 from "images/s2.jpg";
+import sharee4 from "images/s4.jpg";
+import sharee5 from "images/s5.jpg";
 export const likeData = [
     {
       "imgpath": sharee1,
