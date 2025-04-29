@@ -1,6 +1,6 @@
-import Marquee from "react-fast-marquee";
-import { Link } from "react-router-dom";
-import { likeData } from "data/youMayLikeData";
+// import Marquee from "react-fast-marquee";
+// import { Link } from "react-router-dom";
+// import { likeData } from "data/youMayLikeData";
 import MostPopular from "./mostPopular";
 
 const YouMayLike = () => {

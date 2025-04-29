@@ -7,7 +7,7 @@ const FilterBy = () => {
   const openOffCanvas = () => setIsCanvasOpen(true);
   const closeOffCanvas = () => setIsCanvasOpen(false);
   return (
-    <div>
+    // <div>
       <div>
         <div
           className="flex text-xl text-gray-800 cursor-pointer"
@@ -75,7 +75,7 @@ const FilterBy = () => {
 
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   )
 }

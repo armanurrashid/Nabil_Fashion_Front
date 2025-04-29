@@ -3,10 +3,39 @@ import sharee1 from "images/sharee1.png";
 import sharee2 from "images/sharee2.jpg";
 import sharee3 from "images/sharee3.jpg";
 import 'flowbite';
+import { useEffect, useState } from "react";
 // import RightArrow from "svgs/rightArrow";
 // import UpcomingCampaigns from "./countDownCard";
 
 const Banner = () => {
+    const [initialDays, setInitialDays] = useState(2);
+    const [initialHours, setInitialHours] = useState(0);
+    const [initialMinutes, setInitialMinutes] = useState(0);
+    const [initialSeconds, setInitialSeconds] = useState(0);
+    const [timeLeft, setTimeLeft] = useState(
+        initialDays * 86400 + initialHours * 3600 + initialMinutes * 60 + initialSeconds
+    );
+
+    useEffect(() => {
+        if (timeLeft <= 0) return;
+
+        const timer = setInterval(() => {
+            setTimeLeft((prev) => prev - 1);
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [timeLeft]);
+
+    const formatTime = (totalSeconds) => {
+        const days = Math.floor(totalSeconds / 86400);
+        const hours = Math.floor((totalSeconds % 86400) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        return { days, hours, minutes, seconds };
+    };
+
+    const { days, hours, minutes, seconds } = formatTime(timeLeft);
     return (
         <div className="container mx-auto">
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 items-center my-5 md:mx-10 xl:mx-0">
@@ -38,10 +67,10 @@ const Banner = () => {
                         <li>
                             <div class="h-full flex p-4 bg-white rounded-xl min-w-[248px]">
 
-                                <div class="flex-1 ">
-                                    <div class="bg-gradient-to-tr from-red-500 via-yellow-400 to-yellow-300 text-transparent bg-clip-text text-center">
+                                <div class="flex-1 items-center justify-center">
+                                    <div class="bg-gradient-to-tr from-red-500 via-yellow-400 to-yellow-300 text-transparent bg-clip-text text-center ">
                                         <div class="text-0">
-                                            <img  alt="happy hour"
+                                            <img alt="happy hour"
                                                 loading="lazy"
                                                 width="320"
                                                 height="121"
@@ -49,16 +78,60 @@ const Banner = () => {
                                                 class="mx-auto transition-opacity duration-300 ease-in-out w-full"
                                                 src="https://evaly.com.bd/web-static/images/fashion.png" />
                                         </div>
-                                        <p class="mb-1 text-sm font-semibold">Campaign starts in</p>
+                                        <p class="mb-1 text-base font-semibold">Campaign starts in</p>
                                     </div>
                                 </div>
 
-                                <div class="flex-1 h-full px-4 py-2">
-                                    <div class="grid grid-cols-2 gap-2 items-center">
-                                        <p class="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white ">1d</p>
-                                        <p class="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">2h</p>
-                                        <p class="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">17m</p>
-                                        <p class="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">19s</p>
+                                <div className="flex-1 h-full px-4 py-2">
+                                    <div className="grid grid-cols-2 gap-2 items-center">
+                                        <p className="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">
+                                            {days}d
+                                        </p>
+                                        <p className="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">
+                                            {hours}h
+                                        </p>
+                                        <p className="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">
+                                            {minutes}m
+                                        </p>
+                                        <p className="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">
+                                            {seconds}s
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="h-full flex p-4 bg-white rounded-xl min-w-[248px]">
+
+                                <div class="flex-1 items-center justify-center">
+                                    <div class="bg-gradient-to-tr from-red-500 via-yellow-400 to-yellow-300 text-transparent bg-clip-text text-center ">
+                                        <div class="text-0">
+                                            <img alt="happy hour"
+                                                loading="lazy"
+                                                width="320"
+                                                height="121"
+                                                decoding="async"
+                                                class="mx-auto transition-opacity duration-300 ease-in-out w-full"
+                                                src="https://evaly.com.bd/web-static/images/fashion.png" />
+                                        </div>
+                                        <p class="mb-1 text-base font-semibold">Campaign starts in</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex-1 h-full px-4 py-2">
+                                    <div className="grid grid-cols-2 gap-2 items-center">
+                                        <p className="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">
+                                            {days}d
+                                        </p>
+                                        <p className="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">
+                                            {hours}h
+                                        </p>
+                                        <p className="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">
+                                            {minutes}m
+                                        </p>
+                                        <p className="w-full py-1.5 md:py-4 text-base md:text-lg px-1 text-center font-bold bg-[#3D444E] rounded text-white">
+                                            {seconds}s
+                                        </p>
                                     </div>
                                 </div>
                             </div>

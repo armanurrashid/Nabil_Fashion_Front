@@ -5,6 +5,7 @@ import SortBy from 'components/sortBy';
 import YouMayLike from 'components/YouMayLike';
 import FilterData from 'components/filterBy';
 import { likeData } from "data/youMayLikeData";
+import FooterSection from 'assets/Footer';
 
 const SubCategory =()=> {
   return (
@@ -17,6 +18,7 @@ const SubCategory =()=> {
     <CardDesign likeData={likeData} title="Sub Category" slice={20}/>
     <Catelouge />
     <YouMayLike />
+    <FooterSection />
 </div>
   )
 }

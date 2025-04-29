@@ -1,4 +1,5 @@
 import logo from "images/Nabil Fashion.svg";
+import { Link } from "react-router-dom";
 import Cart from "svgs/cart";
 const Navbar = () => {
     return (
@@ -36,9 +37,11 @@ const Navbar = () => {
             <div className="flex justify-between md:justify-start gap-6 xl:py-4 py-2 md:shadow px-5 items-center">
 
                 {/* Logo */}
-                <div className="mx-5">
-                    <img src={logo} className="block w-full h-[50px]" alt="logo" />
-                </div>
+                <Link to="/">
+                    <div className="mx-5">
+                        {/* <img src={logo} className="block w-full h-[50px]" alt="logo" /> */}
+                        <p className="italic w-full font-semibold">GHOMTA FASHION</p>
+                    </div></Link>
 
                 {/* Search - Hidden below md */}
                 <div className="searchDiv px-4 w-full hidden md:flex justify-center items-center">
@@ -47,7 +50,7 @@ const Navbar = () => {
                             <div className="flex-1">
                                 <input
                                     className="block w-full p-3 pl-4 outline-none bg-gray-200 xl:text-base text-sm"
-                                    placeholder="Search in Nabil Fashion"
+                                    placeholder="Search in Ghomta Fashion"
                                     autoComplete="off"
                                 />
                             </div>

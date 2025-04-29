@@ -25,10 +25,10 @@ const MostPopular = () => {
     if (currentIndex < images.length - 3) setCurrentIndex(currentIndex + 1);
   };
 
-  const visibleImages = images.slice(currentIndex, currentIndex + 3);
+  // const visibleImages = images.slice(currentIndex, currentIndex + 3);
   return (
     <div className="w-full flex justify-center items-center py-6 px-2">
-      <div className="relative w-full max-w-7xl overflow-hidden">
+      <div className="relative w-full max-w-8xl overflow-hidden">
         {/* Chevron Left */}
         <button
           onClick={goPrev}
@@ -38,7 +38,7 @@ const MostPopular = () => {
         </button>
 
         {/* Slider Track */}
-        <div className="flex transition-transform duration-500 ease-in-out"
+        <div className="flex items-center transition-transform duration-500 ease-in-out"
           style={{
             width: `${(images.length * 100) / 3}%`,
             transform: `translateX(-${(currentIndex * 100) / images.length}%)`,
@@ -55,12 +55,16 @@ const MostPopular = () => {
                 style={{ width: `${slideWidth}%` }}
               >
                 <div
-                  className={`overflow-hidden rounded-lg shadow-md h-48 sm:h-64 md:h-72 lg:h-80 w-full`}
+                  className={`overflow-hidden rounded-lg shadow-md w-full ${
+                    isMiddle
+                      ? "h-64 sm:h-80 md:h-96" // Taller height for middle image
+                      : "h-52 sm:h-68 md:h-80" // Shorter height for side images
+                  }`}
                 >
                   <img
                     src={img.url}
                     alt={`Slide ${img.id}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
               </div>

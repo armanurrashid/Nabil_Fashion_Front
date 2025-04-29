@@ -5,6 +5,7 @@ import Catelouge from 'components/dashboardComponents/catelouge';
 import YouMayLike from 'components/YouMayLike';
 import SortBy from 'components/sortBy';
 import FilterData from 'components/filterBy';
+import FooterSection from 'assets/Footer';
 
 const AllCategory = () => {
     return (
@@ -20,6 +21,7 @@ const AllCategory = () => {
             <CardDesign likeData={likeData} title="Category 4" slice={10}/>
             <Catelouge />
             <YouMayLike />
+            <FooterSection />
         </div>
     )
 }

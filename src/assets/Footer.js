@@ -11,12 +11,12 @@ const FooterSection = () => {
       <div className='bg-[#111926]'>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4  md:mx-10 mx-4 md:p-12 p-4">
           <div className='text-white p-5'>
-            <h3 className='mb-4 font-semibold text-xl'>NABIL FASHION</h3>
+            <h3 className='mb-4 font-semibold text-xl'>GHOMTA FASHION</h3>
            <div>
            {/* <img src={logo} className=" block w-full h-[40px]" alt="..." /> */}
            </div>
 
-            <p className='mb-2'>Nabil Fashion offers stylish, high-quality clothing at affordable prices. Find your perfect look for every occasion.</p>
+            <p className='mb-2'>We offers stylish, high-quality clothing at affordable prices. Find your perfect look for every occasion.</p>
             <div>
               <p className='text-lg mb-2'>FOLLOW US:</p>
               <div className='flex gap-4'>
@@ -50,8 +50,8 @@ const FooterSection = () => {
           <div className='text-white p-5'>
             <h3 className='mb-4 font-semibold text-xl'>Contact Us</h3>
             <p className='mb-2'>House #8, Road # 14, <br />
-              Dhanmondi, Dhaka-1209.</p>
-            <p className='mb-2'>Email: shareemusium@gmail.com</p>
+              Newmarket, Dhaka-1209.</p>
+            <p className='mb-2'>Email: your@gmail.com</p>
           </div>
           <div className='text-white items-cente r p-5'>
             <h3 className='mb-4 font-semibold text-xl'>Let Us Help You</h3>
