@@ -1,14 +1,18 @@
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
-import { likeData } from "../../src/data/youMayLikeData";
+import { likeData } from "data/youMayLikeData";
+import MostPopular from "./mostPopular";
 
 const YouMayLike = () => {
     return (
         <div className="container mx-auto my-8">
             <div className="mx-4 my-8">
-                <p className="sm:text-[40px] text-[25px] font-bold ">YOU MAY LIKE</p>
+                <p className="sm:text-[40px] text-[25px] opacity-70 ">Most Popular</p>
             </div>
             <div className="mt-4 sm:mx-4 mx-2">
+                <MostPopular/>
+            </div>
+            {/* <div className="mt-4 sm:mx-4 mx-2">
                 <Marquee speed={80} pauseOnHover={true}>
                     <div className="flex w-full gap-8 mb-1 mr-7">
                         {likeData?.length ? (
@@ -25,25 +29,6 @@ const YouMayLike = () => {
                                             className="transition-transform duration-1000 ease-in-out transform h-[242px] w-[300px] object-cover group-hover:scale-110 object-top"
                                         />
                                     </div>
-
-                                    <div className="px-3 pb-4 pt-3">
-                                        <div className="truncate text-[#2D2D2D] font-medium font-inter mx-2">
-                                            {item?.title}
-                                        </div>
-
-                                        <div className="flex justify-between py-2">
-                                            <div className="text-sm text-[#0088FF] font-bold mx-2">
-                                                {item?.Currency}{" "}
-                                                <span className="mx-1">{item?.price}</span>
-                                            </div>
-                                            <div className="flex items-center">
-                                                <div>
-                                                    <p className="font-inter font-semibold text-xs text-[#6C6C6C]">
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </Link>
                             ))
                         ) : (
@@ -51,7 +36,7 @@ const YouMayLike = () => {
                         )}
                     </div>
                 </Marquee>
-            </div>
+            </div> */}
         </div>
     )
 }

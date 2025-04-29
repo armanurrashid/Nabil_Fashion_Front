@@ -30,7 +30,7 @@ const CountdownCard = ({ name, startInSeconds }) => {
     <div className="bg-white p-4 rounded-xl shadow-md mb-4 flex items-center min-w-[300px] px-5 mx-5">
       {/* Left Side */}
       <div className="flex flex-col flex-shrink-0 w-40">
-        <h3 className="text-xl font-bold">{name}</h3>
+        <h3 className="text-lg font-bold">{name}</h3>
         <p className="text-red-600 text-lg font-semibold mt-1">Campaign starts in</p>
       </div>
 
@@ -57,8 +57,8 @@ const CountdownCard = ({ name, startInSeconds }) => {
 
 const UpcomingCampaigns = () => {
   return (
-    <div className="bg-gray-100 p-6 rounded-3xl max-w-lg mx-auto">
-      <h2 className="text-2xl font-semibold mb-4 px-4">Upcoming Campaigns</h2>
+    <div className="bg-gray-100 p-6 rounded-3xl max-w-2xl mx-auto">
+      <h2 className="text-2xl font-bold mb-4 px-4">Upcoming Campaigns</h2>
       <div className="h-96 overflow-y-scroll no-scrollbar pr-2">
         {campaigns.map((campaign) => (
           <CountdownCard
