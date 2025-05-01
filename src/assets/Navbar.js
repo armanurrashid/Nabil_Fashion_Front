@@ -63,13 +63,11 @@ const Navbar = () => {
 
                 {/* Cart */}
                 <div className="flex items-center gap-4 mx-5">
-                    <a
-                        className="relative border border-[#fff] md:hover:border md:hover:border-gray-200 rounded-md transition-colors md:hover:bg-black outline-1 outline-gray-500 p-1 hover:text-white"
-                        href="/"
-                    >
+                    <Link to='/cart'
+                        className="relative border border-[#fff] md:hover:border md:hover:border-gray-200 rounded-md transition-colors md:hover:bg-black outline-1 outline-gray-500 p-1 hover:text-white">
                         <Cart />
                         <span className="sr-only">Cart</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
 
